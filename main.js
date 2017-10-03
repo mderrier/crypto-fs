@@ -61,5 +61,6 @@ lib.watchFile = wrapper.fsSync('watchFile', 1);
 lib.unwatchFile = wrapper.fsSync('unwatchFile', 1);
 lib.createReadStream = require('./lib/common/createReadStream')(lib);
 lib.createWriteStream = require('./lib/common/createWriteStream')(lib);
-
+var filename = require('./lib/utils/filename')
+lib.encrypt = filename.encrypt
 module.exports = Object.freeze(lib);
